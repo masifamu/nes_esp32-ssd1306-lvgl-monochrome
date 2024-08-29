@@ -60,9 +60,9 @@ void app_main(void)
 	button_add(MAIN_RIGHT_BUTTON, true, 1000, main_right_button_callback);
 
 
-	xTaskCreatePinnedToCore(event_handle_task, "event_handle_task", 10000, NULL, 4, &hMain_eventTask, 1);
+	xTaskCreate(event_handle_task, "event_handle_task", 10000, NULL, 4, &hMain_eventTask);
 
-	xTaskCreatePinnedToCore(main_system_task, "main_system_task", 10000, NULL, 4, NULL, 1);
+	xTaskCreate(main_system_task, "main_system_task", 10000, NULL, 4, NULL);
 }
 
 void main_system_task(void* param)

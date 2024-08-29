@@ -28,8 +28,8 @@
 
 
 /* MACROS --------------------------------------------------------------------*/
-#define MAIN_LEFT_BUTTON 		1
-#define MAIN_RIGHT_BUTTON 		3
+#define MAIN_LEFT_BUTTON 		10
+#define MAIN_RIGHT_BUTTON 		11
 
 #define SYS_TICK()				xTaskGetTickCount() * portTICK_PERIOD_MS
 /* ENUMORATIONS --------------------------------------------------------------*/
